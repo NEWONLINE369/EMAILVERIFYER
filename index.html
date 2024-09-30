@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email Validation Tool</title>
+    <script src="https://cdn.jsdelivr.net/npm/xlsx@0.17.5/dist/xlsx.full.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="script.js" defer></script>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h2 {
+            text-align: center;
+        }
+        .file-input {
+            margin: 20px 0;
+        }
+        #emailChart {
+            width: 100%;
+            height: 400px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Email Validation Tool</h2>
+    <input type="file" id="fileInput" class="file-input" accept=".csv, .xlsx, .xls">
+    <button onclick="processFile()">Validate Emails</button>
+
+    <canvas id="emailChart"></canvas>
+
+    <h3>Results:</h3>
+    <p id="totalEmails">Total Emails: 0</p>
+    <p id="validEmails">Valid Emails: 0</p>
+    <p id="invalidEmails">Invalid Emails: 0</p>
+</div>
+
+</body>
+</html>
